@@ -1,0 +1,19 @@
+<templateSet group="customTemplate">
+  <template name="/**" value="/**&#10; *  @author: yuhainan&#10; *  @Date: $Date$ $time$&#10; *  @Description:&#10; */ " shortcut="ENTER" description="类注释" toReformat="false" toShortenFQNames="true">
+    <variable name="Date" expression="date()" defaultValue="" alwaysStopAt="true" />
+    <variable name="time" expression="time()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="/*" value="/**&#10;* @Date   $date$ $time$&#10;* @Param  $param$&#10;* @Return      $return$&#10;* @Exception   $exception$&#10;* @Description&#10;*/" shortcut="ENTER" description="方法注释" toReformat="false" toShortenFQNames="true">
+    <variable name="date" expression="date()" defaultValue="" alwaysStopAt="true" />
+    <variable name="time" expression="time()" defaultValue="" alwaysStopAt="true" />
+    <variable name="param" expression="methodParameters()" defaultValue="" alwaysStopAt="true" />
+    <variable name="return" expression="methodReturnType()" defaultValue="" alwaysStopAt="true" />
+    <variable name="exception" expression="expressionType(Expression)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
